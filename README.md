@@ -19,19 +19,37 @@ This tool was developed by the **EDUFlow** group to simplify the process of sele
 ## 📁 Project Structure
 
 Green-Architecture-Formula/
-├── index.html               # Main UI and structure
-├── style.css                # Clean and minimalist styling
-├── styles/
-│   ├── calculator.css       # Styles specific to CO₂ calculator
-│   ├── main.css             # CSS variables and general styles
-│   ├── navbar.css           # Logo and name styling
-│   ├── responsive.css       # Responsive layout for multiple devices
-│   └── sections.css         # Styling for each webpage section
+├── index.html
+├── css/
+│ ├── calculator.css
+│ ├── main.css
+│ ├── navbar.css
+│ ├── responsive.css
+│ └── sections.css
 ├── js/
-│   ├── calculator.js        # CO₂ logic and interactive formulas
-│   ├── main.js              # General JavaScript for navigation/UI
-│   └── plant-data.js        # Plant database and absorption logic
-└── README.md                # Project overview (you’re here)
+│ ├── calculator.js
+│ ├── main.js
+│ └── plant-data.js
+└── README.md
+
+---
+
+## 📄 File Descriptions
+
+- **index.html** – Main UI structure and layout.
+- **css/** – Styling folder:
+  - `calculator.css` – Styles for the CO₂ calculator.
+  - `main.css` – Root variables and base styles.
+  - `navbar.css` – Styling for the logo and navigation.
+  - `responsive.css` – Ensures mobile/tablet compatibility.
+  - `sections.css` – Style rules for individual sections.
+- **js/** – Logic and interactivity scripts:
+  - `calculator.js` – Handles CO₂ calculation logic.
+  - `main.js` – General UI functionality and transitions.
+  - `plant-data.js` – Database of plant CO₂ absorption data.
+- **README.md** – This file. Contains project overview and structure.
+
+---
 
 ## 🚀 Getting Started
 
