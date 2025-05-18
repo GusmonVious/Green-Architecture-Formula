@@ -23,7 +23,7 @@ This tool was developed by the **EDUFlow** group to simplify the process of sele
 ## 📄 File Descriptions
 
 - **index.html** – Main UI structure and layout.
-- **css/** – Styling folder:
+- **styles/** – Styling folder:
   - `calculator.css` – Styles for the CO₂ calculator.
   - `main.css` – Root variables and base styles.
   - `navbar.css` – Styling for the logo and navigation.
