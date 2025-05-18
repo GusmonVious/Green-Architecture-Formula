@@ -24,7 +24,7 @@
               <path d="M11 20A7 7 0 0 1 9.8 8.8a1 1 0 0 0 1.7-1A10 10 0 0 0 6 19c-1.8-1.3-3-3.4-3-6C3 5.8 11 3 11 3s8 2.8 8 10c0 7-3.6 9.2-7 7" />
               <path d="M11 20v-8" />
             </svg>
-            <span>GAF - EDUflow</span>
+            <span>GAF</span>
           </div>
         </div>
       </div>
@@ -36,46 +36,139 @@
           <div class="leaf-bg"></div>
           <h1>Green Architecture Formula</h1>
           <h2>A Maths-Driven System for Sustainable Architecture</h2>
-          <p>Welcome to the Green Architecture Formula — a data-driven tool designed to help you design more sustainable living spaces. This isn't a fantasy; it's a practical system based on real-world research, global environmental data, and basic math. Whether you're a student, homeowner, or designer, this tool offers flexible, personalized insights for reducing your footprint in simple, measurable steps.</p>
+          <p>Welcome to the Green Architecture Formula - a data-driven tool designed to help you design more sustainable living spaces. It's a practical system based on real-world research, global environmental data, and basic math. Whether you're a student, homeowner, or designer, this tool offers flexible, personalized insights for reducing your footprint in simple, measurable steps.</p>
           <a href="#calculator" class="cta-button">Try the Calculator</a>
         </div>
       </section>
 
       <section id="evidence" class="evidence">
         <div class="container">
-          <h2>Evidence & Calculations</h2>
-          <p>Here we present the trusted data that backs our formulas:</p>
+          <h2>Evidence & Mathematical Foundation</h2>
           
-          <div class="evidence-cards">
-            <div class="evidence-card">
-              <div class="card-icon waste-icon"></div>
-              <h3>Solid Waste Generation</h3>
-              <p><strong>0.8 kg/person/day</strong></p>
-              <p>Myanmar estimate</p>
-            </div>
-            
-            <div class="evidence-card">
-              <div class="card-icon electricity-icon"></div>
-              <h3>Electricity Need</h3>
-              <p><strong>1.64 kWh/day/person</strong></p>
-              <p>By 2025 (based on 3-year national trend)</p>
-            </div>
-            
-            <div class="evidence-card">
-              <div class="card-icon co2-icon"></div>
-              <h3>CO₂ Offset Targets</h3>
-              <p>Based on realistic goals — not idealistic guesses</p>
-            </div>
-            
-            <div class="evidence-card">
-              <div class="card-icon plant-icon"></div>
-              <h3>Plant CO₂ Absorption</h3>
-              <p><strong>e.g., Peepal Tree = 0.09 kg/day</strong></p>
-              <p>Based on researched values</p>
+          <div class="math-section">
+            <h3>Final Mathematical Form</h3>
+            <div class="final-formula">
+              <p class="formula-text">Sustainable house = [( Σ(Ni × Ai) ) ÷ ( (P × 1.64) × Or )] + [ Bs ÷ (P × 0.8) ] + [Ep ÷ (P × 1.64)]</p>
+              
+              <div class="variables">
+                <p>Where:</p>
+                <ul>
+                  <li>P = Number of people</li>
+                  <li>Bs = Bin size in kg</li>
+                  <li>Ep = Solar panel output in kWh/day</li>
+                  <li>Or = CO₂ offset rate (e.g., 0.8 for 80%)</li>
+                  <li>Ni = Number of plants of type i</li>
+                  <li>Ai = CO₂ absorption rate per plant of type i (kg/day)</li>
+                </ul>
+              </div>
             </div>
           </div>
-          
-          <p class="evidence-footer">This section makes the math transparent, and explains how and why the numbers matter.</p>
+
+          <div class="math-section">
+            <h3>CO₂ Calculations</h3>
+            <div class="calculation-steps">
+              <p>Daily CO₂ per person: 1.64 kg/day</p>
+              <p class="source">Source: Our World in Data - CO₂ emissions per capita</p>
+              <div class="calculation">
+                <p>0.6 tonnes/year ÷ 365 days = 0.00164 tonnes/day</p>
+                <p>0.00164 tonnes × 1000 kg/tonne = 1.64 kg/day</p>
+              </div>
+              <p>The term ∑(Ni × Ai) / ((P × 1.64) × Or) calculates the overall CO₂ absorption from the plants. This is the fraction of CO₂ absorbed by the plants in relation to the CO₂ that must be offset for the number of people in the household. By multiplying the number of plants Ni by their absorption rate Ai, and dividing by the CO₂ offset requirement, this term ensures that the plant absorption is accurately adjusted to meet the offset needs.</p>
+            </div>
+          </div>
+
+          <div class="math-section">
+            <h3>Waste Generation</h3>
+            <div class="calculation-steps">
+              <p>Daily waste per person: 0.8 kg/day</p>
+              <p class="source">Source: ResearchGate - Solid waste generation study</p>
+              <table class="bin-sizes">
+                <tr>
+                  <th>Bin Size</th>
+                  <th>Capacity (kg)</th>
+                </tr>
+                <tr>
+                  <td>Large</td>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <td>Medium</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>Small</td>
+                  <td>5</td>
+                </tr>
+              </table>
+              <p>
+                The term
+                Bs / (P × 0.8)
+                calculates the sustainability of waste management based on the bin size (in kg) divided by the per capita waste generated. The waste generation rate (0.8 kg per person per day) is crucial for determining how much waste the household generates and how effectively it aligns with CO₂-conscious design principles.
+              </p>
+            </div>
+          </div>
+
+          <div class="math-section">
+            <h3>Electricity Consumption Projection</h3>
+            <div class="calculation-steps">
+              <table class="consumption-data">
+                <tr>
+                  <th>Year</th>
+                  <th>kWh per capita</th>
+                </tr>
+                <tr>
+                  <td>2021</td>
+                  <td>291.3</td>
+                </tr>
+                <tr>
+                  <td>2022</td>
+                  <td>397.4</td>
+                </tr>
+                <tr>
+                  <td>2023</td>
+                  <td>436.4</td>
+                </tr>
+                <tr>
+                  <td>2024 (projected)</td>
+                  <td>508.95</td>
+                </tr>
+                <tr>
+                  <td>2025 (projected)</td>
+                  <td>581.5</td>
+                </tr>
+              </table>
+              <p class="source">Source: CountryEconomy - Electricity consumption data</p>
+              <p>The term
+              Ep / (P × 1.64)
+              estimates the contribution of solar energy based on per capita daily energy needs, adjusting it for the number of people and the energy output per person (which is 1.64 kWh/day as per your calculation). This ensures that the solar panel output is appropriately accounted for based on the household's energy needs.</p>
+            </div>
+          </div>
+
+          <div class="math-section">
+            <h3>Sustainability Levels</h3>
+            <table class="sustainability-levels">
+              <tr>
+                <th>Offset Percentage</th>
+                <th>Level</th>
+                <th>Comment</th>
+              </tr>
+              <tr>
+                <td>10%</td>
+                <td>Minimum Acceptable</td>
+                <td>A reasonable start</td>
+              </tr>
+              <tr>
+                <td>30%</td>
+                <td>Moderately Sustainable</td>
+                <td>Balances effort and impact</td>
+              </tr>
+              <tr>
+                <td>50%</td>
+                <td>Sustainable</td>
+                <td>Ambitious, ideal goal</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </section>
 
@@ -88,30 +181,63 @@
             <div class="formula-card">
               <h3>CO₂ Absorption Needed</h3>
               <div class="formula-equation">People × 1.64 × Offset Rate</div>
+              <div class="formula-example">
+                <h4>Example Calculation:</h4>
+                <p>For 4 people with 50% offset target:</p>
+                <p>4 × 1.64 × 0.5 = 3.28 kg CO₂/day needed</p>
+              </div>
             </div>
             
             <div class="formula-card">
               <h3>Waste per Day</h3>
               <div class="formula-equation">People × 0.8</div>
+              <div class="formula-example">
+                <h4>Example Calculation:</h4>
+                <p>For 4 people:</p>
+                <p>4 × 0.8 = 3.2 kg waste/day</p>
+              </div>
             </div>
             
             <div class="formula-card">
               <h3>Bins Needed</h3>
               <div class="formula-equation">Waste per Day ÷ Bin Capacity</div>
+              <div class="formula-example">
+                <h4>Example Calculation:</h4>
+                <p>For 3.2 kg/day with 10kg bins:</p>
+                <p>3.2 ÷ 10 = 0.32 (1 bin needed)</p>
+              </div>
             </div>
             
             <div class="formula-card">
               <h3>Panels Needed</h3>
               <div class="formula-equation">Electricity / Panel Output</div>
+              <div class="formula-example">
+                <h4>Example Calculation:</h4>
+                <p>For 6.56 kWh/day (4 people):</p>
+                <p>6.56 ÷ 1.5 = 4.37 (5 panels needed)</p>
+              </div>
             </div>
             
             <div class="formula-card">
               <h3>Total Plant Absorption</h3>
               <div class="formula-equation">∑ (Plant Count × Absorption Rate)</div>
+              <div class="formula-example">
+                <h4>Example Calculation:</h4>
+                <p>2 Peepal (0.18) + 3 Snake (0.006)</p>
+                <p>= 0.186 kg CO₂/day total</p>
+              </div>
             </div>
           </div>
           
-          <p>These give you full visibility into how the logic is structured. You're not just taking our word for it — you're seeing how it's built.</p>
+          <div class="formula-notes">
+            <h3>Important Notes on Calculations</h3>
+            <ul>
+              <li>All calculations use daily rates for consistency</li>
+              <li>Panel output assumes 5 hours peak sunlight</li>
+              <li>Plant absorption varies by climate and care</li>
+              <li>Always round up for bins and panels</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -139,7 +265,7 @@
             </div>
           </div>
           
-          <p class="benefits-footer">Yes — the bin formula alone won't save the planet. But multiplied across thousands of homes, small decisions become meaningful patterns.</p>
+          <p class="benefits-footer">Yes — the formula alone won't save the planet. But multiplied across thousands of homes, small decisions become meaningful patterns.</p>
         </div>
       </section>
 
@@ -203,51 +329,121 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Peepal Tree</td>
-                      <td>0.09</td>
+                      <td>Paulownia Tree</td>
+                      <td>0.095</td>
+                      <td>Medium</td>
+                      <td>Large</td>
+                      <td><input type="number" class="plant-quantity" data-plant="paulownia" data-absorption="0.095" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                      <td>Mango Tree</td>
+                      <td>0.068</td>
                       <td>High</td>
                       <td>Large</td>
-                      <td>
-                        <input type="number" class="plant-quantity" data-plant="peepal" data-absorption="0.09" min="0" value="0">
-                      </td>
+                      <td><input type="number" class="plant-quantity" data-plant="mango" data-absorption="0.068" min="0" value="0"></td>
                     </tr>
                     <tr>
-                      <td>Snake Plant</td>
-                      <td>0.002</td>
+                      <td>Jackfruit Tree</td>
+                      <td>0.055</td>
+                      <td>High</td>
+                      <td>Large</td>
+                      <td><input type="number" class="plant-quantity" data-plant="jackfruit" data-absorption="0.055" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                      <td>Bamboo (Clumping)</td>
+                      <td>0.045</td>
                       <td>Very High</td>
-                      <td>Minimal</td>
-                      <td>
-                        <input type="number" class="plant-quantity" data-plant="snake" data-absorption="0.002" min="0" value="0">
-                      </td>
+                      <td>Moderate</td>
+                      <td><input type="number" class="plant-quantity" data-plant="bamboo" data-absorption="0.045" min="0" value="0"></td>
                     </tr>
                     <tr>
-                      <td>Areca Palm</td>
-                      <td>0.003</td>
+                      <td>Guava Tree</td>
+                      <td>0.034</td>
+                      <td>High</td>
+                      <td>Moderate</td>
+                      <td><input type="number" class="plant-quantity" data-plant="guava" data-absorption="0.034" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                      <td>Pomegranate Tree</td>
+                      <td>0.033</td>
                       <td>Medium</td>
                       <td>Moderate</td>
-                      <td>
-                        <input type="number" class="plant-quantity" data-plant="areca" data-absorption="0.003" min="0" value="0">
-                      </td>
+                      <td><input type="number" class="plant-quantity" data-plant="pomegranate" data-absorption="0.033" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                      <td>Custard Apple Tree</td>
+                      <td>0.027</td>
+                      <td>Medium</td>
+                      <td>Moderate</td>
+                      <td><input type="number" class="plant-quantity" data-plant="custardapple" data-absorption="0.027" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                      <td>Dragon Fruit Cactus</td>
+                      <td>0.027</td>
+                      <td>High</td>
+                      <td>Minimal</td>
+                      <td><input type="number" class="plant-quantity" data-plant="dragonfruit" data-absorption="0.027" min="0" value="0"></td>
                     </tr>
                     <tr>
                       <td>Neem Tree</td>
                       <td>0.03</td>
                       <td>High</td>
                       <td>Large</td>
-                      <td>
-                        <input type="number" class="plant-quantity" data-plant="neem" data-absorption="0.03" min="0" value="0">
-                      </td>
+                      <td><input type="number" class="plant-quantity" data-plant="neem" data-absorption="0.03" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                      <td>Areca Palm</td>
+                      <td>0.003</td>
+                      <td>Medium</td>
+                      <td>Moderate</td>
+                      <td><input type="number" class="plant-quantity" data-plant="areca" data-absorption="0.003" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                      <td>Sanchezia speciosa</td>
+                      <td>0.0162</td>
+                      <td>High</td>
+                      <td>Small</td>
+                      <td><input type="number" class="plant-quantity" data-plant="sanchezia" data-absorption="0.0162" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                      <td>Hibiscus rosa-sinensis</td>
+                      <td>0.0119</td>
+                      <td>High</td>
+                      <td>Small</td>
+                      <td><input type="number" class="plant-quantity" data-plant="hibiscus" data-absorption="0.0119" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                      <td>Ixora coccinea</td>
+                      <td>0.0104</td>
+                      <td>High</td>
+                      <td>Small</td>
+                      <td><input type="number" class="plant-quantity" data-plant="ixora" data-absorption="0.0104" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                      <td>Cordyline fruticosa</td>
+                      <td>0.0125</td>
+                      <td>Medium</td>
+                      <td>Small</td>
+                      <td><input type="number" class="plant-quantity" data-plant="cordyline" data-absorption="0.0125" min="0" value="0"></td>
+                    </tr>
+                    <tr>
+                      <td>Baphia nitida (Camwood)</td>
+                      <td>0.0107</td>
+                      <td>Medium</td>
+                      <td>Small</td>
+                      <td><input type="number" class="plant-quantity" data-plant="camwood" data-absorption="0.0107" min="0" value="0"></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-            
+
             <div class="nav-buttons">
               <button class="prev-tab-btn">Previous: Inputs</button>
               <button class="next-tab-btn">Next: See Results</button>
             </div>
           </div>
+
           
           <div class="tab-content" id="results-tab">
             <div class="results-grid">
@@ -313,7 +509,7 @@
     </footer>
   </div>
 
-  <script src="js/animations.js"></script>
+  <!-- <script src="js/animations.js"></script> -->
   <script src="js/plant-data.js"></script>
   <script src="js/calculator.js"></script>
   <script src="js/main.js"></script>
