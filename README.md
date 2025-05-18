@@ -16,23 +16,9 @@ This tool was developed by the **EDUFlow** group to simplify the process of sele
 - 💸 Metrics include **cost efficiency**, **space requirements**, and **environmental benefit**  
 - 🎓 Designed with education in mind — perfect for project-based learning
 
+--- 
+
 ## 📁 Project Structure
-
-Green-Architecture-Formula/
-├── index.html
-├── css/
-│ ├── calculator.css
-│ ├── main.css
-│ ├── navbar.css
-│ ├── responsive.css
-│ └── sections.css
-├── js/
-│ ├── calculator.js
-│ ├── main.js
-│ └── plant-data.js
-└── README.md
-
----
 
 ## 📄 File Descriptions
 
