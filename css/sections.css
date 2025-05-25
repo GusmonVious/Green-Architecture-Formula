@@ -93,10 +93,6 @@
   background-position: center;
 }
 
-.waste-icon {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="%234a9e57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18" /><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" /><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" /></svg>');
-}
-
 .electricity-icon {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="%234a9e57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>');
 }
@@ -334,29 +330,4 @@ footer p {
   background-color: white;
   border-radius: var(--radius-sm);
   margin: var(--space-3) 0;
-}
-
-.bin-sizes,
-.consumption-data,
-.sustainability-levels {
-  width: 100%;
-  margin: var(--space-4) 0;
-  border-collapse: collapse;
-}
-
-.bin-sizes th,
-.consumption-data th,
-.sustainability-levels th {
-  background-color: var(--color-primary-50);
-  color: var(--color-primary-800);
-  font-weight: 600;
-  text-align: left;
-  padding: var(--space-3);
-}
-
-.bin-sizes td,
-.consumption-data td,
-.sustainability-levels td {
-  padding: var(--space-3);
-  border-bottom: 1px solid var(--color-gray-200);
 }

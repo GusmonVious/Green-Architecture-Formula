@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Green Architecture Formula</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -55,7 +54,6 @@
                 <p>Where:</p>
                 <ul>
                   <li>P = Number of people</li>
-                  <li>Bs = Bin size in kg</li>
                   <li>Ep = Solar panel output in kWh/day</li>
                   <li>Or = CO₂ offset rate (e.g., 0.8 for 80%)</li>
                   <li>Ni = Number of plants of type i</li>
@@ -75,37 +73,6 @@
                 <p>0.00164 tonnes × 1000 kg/tonne = 1.64 kg/day</p>
               </div>
               <p>The term ∑(Ni × Ai) / ((P × 1.64) × Or) calculates the overall CO₂ absorption from the plants. This is the fraction of CO₂ absorbed by the plants in relation to the CO₂ that must be offset for the number of people in the household. By multiplying the number of plants Ni by their absorption rate Ai, and dividing by the CO₂ offset requirement, this term ensures that the plant absorption is accurately adjusted to meet the offset needs.</p>
-            </div>
-          </div>
-
-          <div class="math-section">
-            <h3>Waste Generation</h3>
-            <div class="calculation-steps">
-              <p>Daily waste per person: 0.8 kg/day</p>
-              <p class="source">Source: ResearchGate - Solid waste generation study</p>
-              <table class="bin-sizes">
-                <tr>
-                  <th>Bin Size</th>
-                  <th>Capacity (kg)</th>
-                </tr>
-                <tr>
-                  <td>Large</td>
-                  <td>15</td>
-                </tr>
-                <tr>
-                  <td>Medium</td>
-                  <td>10</td>
-                </tr>
-                <tr>
-                  <td>Small</td>
-                  <td>5</td>
-                </tr>
-              </table>
-              <p>
-                The term
-                Bs / (P × 0.8)
-                calculates the sustainability of waste management based on the bin size (in kg) divided by the per capita waste generated. The waste generation rate (0.8 kg per person per day) is crucial for determining how much waste the household generates and how effectively it aligns with CO₂-conscious design principles.
-              </p>
             </div>
           </div>
 
@@ -190,26 +157,6 @@
             </div>
             
             <div class="formula-card">
-              <h3>Waste per Day</h3>
-              <div class="formula-equation">People × 0.8</div>
-              <div class="formula-example">
-                <h4>Example Calculation:</h4>
-                <p>For 4 people:</p>
-                <p>4 × 0.8 = 3.2 kg waste/day</p>
-              </div>
-            </div>
-            
-            <div class="formula-card">
-              <h3>Bins Needed</h3>
-              <div class="formula-equation">Waste per Day ÷ Bin Capacity</div>
-              <div class="formula-example">
-                <h4>Example Calculation:</h4>
-                <p>For 3.2 kg/day with 10kg bins:</p>
-                <p>3.2 ÷ 10 = 0.32 (1 bin needed)</p>
-              </div>
-            </div>
-            
-            <div class="formula-card">
               <h3>Panels Needed</h3>
               <div class="formula-equation">Electricity / Panel Output</div>
               <div class="formula-example">
@@ -236,7 +183,6 @@
               <li>All calculations use daily rates for consistency</li>
               <li>Panel output assumes 5 hours peak sunlight</li>
               <li>Plant absorption varies by climate and care</li>
-              <li>Always round up for bins and panels</li>
             </ul>
           </div>
         </div>
@@ -250,7 +196,6 @@
             <div class="benefits-column">
               <h3>Individual-Level Benefits</h3>
               <ul>
-                <li>Saves money by right-sizing solar, bins, and design choices</li>
                 <li>Encourages cleaner, more organized home environments</li>
                 <li>Introduces measurable sustainability into daily life</li>
               </ul>
@@ -259,7 +204,6 @@
             <div class="benefits-column">
               <h3>Global-Level Benefits</h3>
               <ul>
-                <li>Reduces unnecessary consumption and waste</li>
                 <li>Helps normalize smarter environmental decisions</li>
                 <li>Builds collective momentum toward practical sustainability</li>
               </ul>
@@ -304,13 +248,9 @@
                 <label for="panel-output">Solar Panel Output (kWh/day)</label>
                 <input type="number" id="panel-output" min="0" step="0.1" value="1.5">
               </div>
-              
-              <div class="input-group">
-                <label for="bin-capacity">Waste Bin Capacity (kg)</label>
-                <input type="number" id="bin-capacity" min="0" step="0.1" value="10">
-              </div>
-            </div>
             
+            
+            </div>
             <button class="next-tab-btn">Next: Select Plants</button>
           </div>
           
@@ -470,13 +410,6 @@
                 </div>
               </div>
               
-              <div class="result-card">
-                <h3>Waste Management</h3>
-                <div class="result-value" id="bins-result">Calculating...</div>
-                <div class="result-visualization">
-                  <div class="bin-icons"></div>
-                </div>
-              </div>
             </div>
             
             <div class="recommendations-section">

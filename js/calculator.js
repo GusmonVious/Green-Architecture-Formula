@@ -8,7 +8,6 @@ let calculatorData = {
   offsetRate: 50,
   electricity: 6.56,
   panelOutput: 1.5,
-  binCapacity: 10,
   plants: []
 };
 
@@ -108,13 +107,6 @@ function initInputHandlers() {
     updateCalculations();
   });
   
-  // Bin capacity input
-  const binCapacityInput = document.getElementById('bin-capacity');
-  binCapacityInput.addEventListener('input', () => {
-    calculatorData.binCapacity = parseFloat(binCapacityInput.value) || 0.1;
-    updateCalculations();
-  });
-  
   // Plant quantity inputs
   document.querySelectorAll('.plant-quantity').forEach(input => {
     input.addEventListener('input', () => {
@@ -153,7 +145,6 @@ function setDefaultValues() {
   document.querySelector('.range-value').textContent = `${calculatorData.offsetRate}%`;
   document.getElementById('electricity').value = calculatorData.electricity;
   document.getElementById('panel-output').value = calculatorData.panelOutput;
-  document.getElementById('bin-capacity').value = calculatorData.binCapacity;
 }
 
 /**
@@ -164,13 +155,7 @@ function updateCalculations() {
   const panelsNeeded = Math.ceil(calculatorData.electricity / calculatorData.panelOutput);
   document.getElementById('panels-result').textContent = `${panelsNeeded} solar panels`;
   updatePanelIcons(panelsNeeded);
-  
-  // Calculate waste bins needed
-  const wastePerDay = calculatorData.people * 0.8;
-  const binsNeeded = Math.ceil(wastePerDay / calculatorData.binCapacity);
-  document.getElementById('bins-result').textContent = `${binsNeeded} waste bins`;
-  updateBinIcons(binsNeeded);
-  
+
   // Calculate CO2 offset
   const totalAbsorption = calculatorData.plants.reduce((total, plant) => {
     return total + (plant.absorption * plant.quantity);
@@ -183,7 +168,7 @@ function updateCalculations() {
   updateProgressCircle(offsetPercentage);
   
   // Update recommendations
-  updateRecommendations(panelsNeeded, offsetPercentage, binsNeeded, absorptionNeeded, totalAbsorption);
+  updateRecommendations(panelsNeeded, offsetPercentage, absorptionNeeded, totalAbsorption);
 }
 
 /**
@@ -220,39 +205,6 @@ function updatePanelIcons(count) {
 }
 
 /**
- * Update the bin icons visualization
- */
-function updateBinIcons(count) {
-  const binIconsContainer = document.querySelector('.bin-icons');
-  binIconsContainer.innerHTML = '';
-  
-  // Limit to display max 5 icons
-  const maxDisplay = 5;
-  const displayCount = Math.min(count, maxDisplay);
-  
-  for (let i = 0; i < displayCount; i++) {
-    const binIcon = document.createElement('div');
-    binIcon.classList.add('bin-icon');
-    binIcon.innerHTML = `
-      <svg viewBox="0 0 24 24" width="30" height="30" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 6h18"></path>
-        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
-        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
-      </svg>
-    `;
-    binIconsContainer.appendChild(binIcon);
-  }
-  
-  // Add +X more indicator if needed
-  if (count > maxDisplay) {
-    const moreIndicator = document.createElement('div');
-    moreIndicator.classList.add('more-indicator');
-    moreIndicator.textContent = `+${count - maxDisplay} more`;
-    binIconsContainer.appendChild(moreIndicator);
-  }
-}
-
-/**
  * Update the progress circle for CO2 offset
  */
 function updateProgressCircle(percentage) {
@@ -284,7 +236,7 @@ function updateProgressCircle(percentage) {
 /**
  * Update recommendations based on calculations
  */
-function updateRecommendations(panelsNeeded, offsetPercentage, binsNeeded, absorptionNeeded, totalAbsorption) {
+function updateRecommendations(panelsNeeded, offsetPercentage, absorptionNeeded, totalAbsorption) {
   const recommendationsList = document.getElementById('recommendations-list');
   recommendationsList.innerHTML = '';
   
@@ -316,11 +268,6 @@ function updateRecommendations(panelsNeeded, offsetPercentage, binsNeeded, absor
     }
   } else if (offsetPercentage >= 100) {
     addRecommendation(`Excellent! You're meeting or exceeding your CO₂ offset target of ${calculatorData.offsetRate}%.`);
-  }
-  
-  // Waste management recommendations
-  if (binsNeeded > 3) {
-    addRecommendation(`Consider waste reduction strategies or larger capacity bins. Your household produces approximately ${(calculatorData.people * 0.8).toFixed(1)} kg of waste per day.`);
   }
   
   // General recommendations

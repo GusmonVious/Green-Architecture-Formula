@@ -186,7 +186,7 @@
   min-height: 120px;
 }
 
-.panel-icons, .bin-icons {
+.panel-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
